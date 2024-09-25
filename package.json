@@ -132,6 +132,7 @@
     "utils-merge": "^1.0.1",
     "uuid": "^3.4.0",
     "vary": "^1.1.2",
+    "vercel": "^37.5.4",
     "verror": "^1.10.0",
     "webidl-conversions": "^3.0.1",
     "whatwg-url": "^5.0.0"
