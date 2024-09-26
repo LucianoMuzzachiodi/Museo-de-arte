@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let location = '';
     let page = 1;
     const itemsPerPage = 20;
+    const backToTopButton = document.getElementById('backToTop');
     let objectIDs = [];
 
 
@@ -291,6 +292,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 imageGalleryContent.appendChild(imageElement);
             });
         }
+    }
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";  
+        } else {
+            backToTopButton.style.display = "none";  
+        }
+    };
+
+    backToTopButton.addEventListener("click", function() {
+        smoothScrollToTop();
+    });
+
+    function smoothScrollToTop() {
+        const scrollDuration = 600;
+        const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+        const scrollInterval = setInterval(function() {
+            if (window.scrollY !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15);
     }
 
     
