@@ -5,6 +5,18 @@ body {
     padding-top: 20px;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -60px;
+}
+
+.logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
 h1, h5 {
     font-family: 'Playfair Display', serif;
     color: #A83F39;
