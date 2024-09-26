@@ -11,11 +11,22 @@ body {
     margin-bottom: -60px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .logo {
     max-width: 300px;
     width: 100%;
     height: auto;
+    margin-bottom: -70px;
+    transition: transform 0.3s ease;
 }
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
 
 h1, h5 {
     font-family: 'Playfair Display', serif;
